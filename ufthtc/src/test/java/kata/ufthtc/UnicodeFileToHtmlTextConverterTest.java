@@ -12,4 +12,6 @@ public class UnicodeFileToHtmlTextConverterTest {
     public void a_trivial_test() {
         assertEquals(5, 2 + 3);
     }
+
+    // TODO-new-feature: Make the method convertToHtml() working for not only a file but also a string
 }
