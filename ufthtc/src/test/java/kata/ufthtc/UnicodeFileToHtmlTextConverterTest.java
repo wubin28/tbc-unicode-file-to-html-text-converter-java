@@ -2,15 +2,16 @@ package kata.ufthtc;
 
 import org.junit.Test;
 
+import java.io.IOException;
+
 import static org.junit.Assert.assertEquals;
 
 /**
  * Created by benwu on 14-6-10.
  */
 public class UnicodeFileToHtmlTextConverterTest {
-    // TODO-acceptance-test-working-on: should convert ampersand
     @Test
-    public void should_convert_ampersand() {
+    public void should_convert_ampersand() throws IOException{
         // Arrange
         StringSource stringSource = new StringSource();
         stringSource.setSourceString("H&M");
