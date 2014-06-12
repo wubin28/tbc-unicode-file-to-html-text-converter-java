@@ -10,11 +10,16 @@ import java.io.IOException;
  * Created by benwu on 14-6-10.
  */
 public class UnicodeFileToHtmlTextConverter {
+    private ConvertingSource convertingSource;
     private String fullFilenameWithPath;
 
     public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath)
     {
         this.fullFilenameWithPath = fullFilenameWithPath;
+    }
+
+    public UnicodeFileToHtmlTextConverter(ConvertingSource convertingSource) {
+        this.convertingSource = convertingSource;
     }
 
     public String convertToHtml() throws IOException{
