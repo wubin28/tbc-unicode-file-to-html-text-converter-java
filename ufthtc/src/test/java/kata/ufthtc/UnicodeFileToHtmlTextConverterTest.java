@@ -14,4 +14,8 @@ public class UnicodeFileToHtmlTextConverterTest {
     }
 
     // TODO-new-feature: Make the method convertToHtml() working for not only a file but also a string
+
+    // TODO-acceptance-test: should convert ampersand
+    // TODO-acceptance-test: should convert greater than and less than
+    // TODO-acceptance-test: should add a line break for a new line
 }
