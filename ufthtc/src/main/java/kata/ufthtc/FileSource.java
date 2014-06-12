@@ -10,4 +10,8 @@ public class FileSource implements ConvertingSource {
     public Reader getReader() {
         return null;
     }
+
+    public void setFullFilenameWithPath(String fullFilenameWithPath) {
+        
+    }
 }
