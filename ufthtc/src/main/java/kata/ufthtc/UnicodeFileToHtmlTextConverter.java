@@ -11,11 +11,12 @@ import java.io.IOException;
  */
 public class UnicodeFileToHtmlTextConverter {
     private ConvertingSource convertingSource;
-    private String fullFilenameWithPath;
 
     public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath)
     {
-        this.fullFilenameWithPath = fullFilenameWithPath;
+        FileSource fileSource = new FileSource();
+        fileSource.setFullFilenameWithPath(fullFilenameWithPath);
+        this.convertingSource = fileSource;
     }
 
     public UnicodeFileToHtmlTextConverter(ConvertingSource convertingSource) {
