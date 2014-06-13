@@ -25,7 +25,6 @@ public class UnicodeFileToHtmlTextConverter {
 
     public String convertToHtml() throws IOException{
 
-        // TODO-working-on: Depending on the file system violates the Dependency Inversion Principle and Open-Closed Principle
         BufferedReader reader = new BufferedReader(convertingSource.getReader());
 
         String line = reader.readLine();
