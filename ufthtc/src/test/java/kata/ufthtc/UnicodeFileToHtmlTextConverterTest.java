@@ -18,7 +18,8 @@ public class UnicodeFileToHtmlTextConverterTest {
     public void initialize() {
         // Arrange
         stringSource = new StringSource();
-        converter = new UnicodeFileToHtmlTextConverter(stringSource);
+        HtmlEscaper htmlEscaper = new ApacheCommonsEscaper();
+        converter = new UnicodeFileToHtmlTextConverter(stringSource, htmlEscaper);
     }
 
     @Test
