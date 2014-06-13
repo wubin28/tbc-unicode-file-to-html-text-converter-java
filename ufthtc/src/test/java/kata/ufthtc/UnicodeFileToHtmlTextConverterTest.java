@@ -22,7 +22,18 @@ public class UnicodeFileToHtmlTextConverterTest {
         assertEquals("H&amp;M<br />", converter.convertToHtml());
     }
 
-    // TODO-acceptance-test: should convert greater than and less than
+    @Test
+    public void should_convert_greater_than_and_less_than() throws IOException{
+        // Arrange
+        StringSource stringSource = new StringSource();
+        stringSource.setSourceString(">_<|||");
+        UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(stringSource);
+
+        // Act
+        // Assert
+        assertEquals("&gt;_&lt;|||<br />", converter.convertToHtml());
+    }
+
     // TODO-acceptance-test: should add a line break for a new line
     // TODO-new-feature: Make the method convertToHtml() working for not only a file but also a string
 }
