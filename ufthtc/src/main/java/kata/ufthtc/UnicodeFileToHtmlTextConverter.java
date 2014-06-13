@@ -10,6 +10,7 @@ import java.io.IOException;
  * Created by benwu on 14-6-10.
  */
 public class UnicodeFileToHtmlTextConverter {
+    private HtmlEscaper htmlEscaper;
     private ConvertingSource convertingSource;
 
     public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath)
@@ -17,10 +18,16 @@ public class UnicodeFileToHtmlTextConverter {
         FileSource fileSource = new FileSource();
         fileSource.setFullFilenameWithPath(fullFilenameWithPath);
         this.convertingSource = fileSource;
+        this.htmlEscaper = new ApacheCommonsEscaper();
     }
 
     public UnicodeFileToHtmlTextConverter(ConvertingSource convertingSource) {
+        this(convertingSource, new ApacheCommonsEscaper());
+    }
+
+    public UnicodeFileToHtmlTextConverter(ConvertingSource convertingSource, HtmlEscaper htmlEscaper) {
         this.convertingSource = convertingSource;
+        this.htmlEscaper = htmlEscaper;
     }
 
     public String convertToHtml() throws IOException{
