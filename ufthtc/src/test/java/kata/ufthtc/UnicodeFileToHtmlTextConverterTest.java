@@ -12,7 +12,6 @@ import static org.junit.Assert.assertEquals;
  */
 public class UnicodeFileToHtmlTextConverterTest {
 
-    // TODO-acceptance-test-working-on: should convert ampersand
     @Test
     public void should_convert_ampersand() throws IOException {
         // Arrange
