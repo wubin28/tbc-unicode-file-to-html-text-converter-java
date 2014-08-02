@@ -2,9 +2,7 @@ package kata.ufthtc;
 
 import org.apache.commons.lang.StringEscapeUtils;
 
-import java.io.BufferedReader;
-import java.io.FileReader;
-import java.io.IOException;
+import java.io.*;
 
 /**
  * Created by benwu on 14-6-10.
@@ -15,6 +13,10 @@ public class UnicodeFileToHtmlTextConverter {
     public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath)
     {
         this.fullFilenameWithPath = fullFilenameWithPath;
+    }
+
+    public UnicodeFileToHtmlTextConverter(Reader reader) {
+
     }
 
     public String convertToHtml() throws IOException{
