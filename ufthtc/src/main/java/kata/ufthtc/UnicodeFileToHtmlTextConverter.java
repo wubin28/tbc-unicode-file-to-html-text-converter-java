@@ -12,11 +12,11 @@ public class UnicodeFileToHtmlTextConverter {
     private StringEscaper stringEscaper;
 
     public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath) throws FileNotFoundException {
-        this.reader = new FileReader(fullFilenameWithPath);
+        this(new FileReader(fullFilenameWithPath), new StringEscaper());
     }
 
     public UnicodeFileToHtmlTextConverter(Reader reader) {
-        this.reader = reader;
+        this(reader, new StringEscaper());
     }
 
     public UnicodeFileToHtmlTextConverter(Reader reader, StringEscaper stringEscaper) {
