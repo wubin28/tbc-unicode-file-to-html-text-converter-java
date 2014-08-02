@@ -32,7 +32,6 @@ public class UnicodeFileToHtmlTextConverter {
         String html = "";
         while (line != null)
         {
-            // TODO-working-on: Depending on the third party library violates the Dependency Inversion Principle and Open-Closed Principle
             html += this.stringEscaper.escapeHtml(line);
             html += "<br />";
             line = reader.readLine();
