@@ -20,7 +20,8 @@ public class UnicodeFileToHtmlTextConverter {
     }
 
     public UnicodeFileToHtmlTextConverter(Reader reader, StringEscaper stringEscaper) {
-
+        this.reader = reader;
+        this.stringEscaper = stringEscaper;
     }
 
     public String convertToHtml() throws IOException{
