@@ -8,12 +8,10 @@ import java.io.*;
  * Created by benwu on 14-6-10.
  */
 public class UnicodeFileToHtmlTextConverter {
-    private String fullFilenameWithPath;
     private Reader reader;
 
-    public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath)
-    {
-        this.fullFilenameWithPath = fullFilenameWithPath;
+    public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath) throws FileNotFoundException {
+        this.reader = new FileReader(fullFilenameWithPath);
     }
 
     public UnicodeFileToHtmlTextConverter(Reader reader) {
