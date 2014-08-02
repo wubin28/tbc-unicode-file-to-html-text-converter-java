@@ -30,6 +30,14 @@ public class UnicodeFileToHtmlTextConverterTest {
         assertEquals("&gt;_&lt;|||<br />", converter.convertToHtml());
     }
 
-    // TODO-acceptance-test: should add a line break for a new line
+    @Test
+    public void should_add_a_line_break_for_a_new_line() throws IOException {
+        // Arrange
+        UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(new StringReader("Cheers\nBen Wu"));
+
+        // Act & Assert
+        assertEquals("Cheers<br />Ben Wu<br />", converter.convertToHtml());
+    }
+
     // TODO-new-feature: Make the method convertToHtml() working for not only a file but also a string
 }
