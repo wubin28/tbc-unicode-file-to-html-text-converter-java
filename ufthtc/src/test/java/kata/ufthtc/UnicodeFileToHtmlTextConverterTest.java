@@ -22,6 +22,16 @@ public class UnicodeFileToHtmlTextConverterTest {
     }
 
     @Test
+    public void should_convert_ampersand_using_StringEscaper() throws IOException {
+        // Arrange
+        StringEscaper stringEscaper = new StringEscaper();
+        UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(new StringReader("H&M"), stringEscaper);
+
+        // Act & Assert
+        assertEquals("H&amp;M<br />", converter.convertToHtml());
+    }
+
+    @Test
     public void should_convert_greater_than_and_less_than() throws IOException {
         // Arrange
         UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(new StringReader(">_<|||"));
