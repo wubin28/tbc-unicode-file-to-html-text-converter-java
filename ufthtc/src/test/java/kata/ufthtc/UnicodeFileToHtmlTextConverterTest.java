@@ -2,6 +2,8 @@ package kata.ufthtc;
 
 import org.junit.Test;
 
+import java.io.StringReader;
+
 import static org.junit.Assert.assertEquals;
 
 /**
@@ -12,7 +14,10 @@ public class UnicodeFileToHtmlTextConverterTest {
     // TODO-acceptance-test-working-on: should convert ampersand
     @Test
     public void should_convert_ampersand() {
-        // Assert
+        // Arrange
+        UnicodeFileToHtmlTextConverter converter = new UnicodeFileToHtmlTextConverter(new StringReader("H&M"));
+
+        // Act & Assert
         assertEquals("H&amp;M<br />", converter.convertToHtml());
     }
 
