@@ -9,6 +9,7 @@ import java.io.*;
  */
 public class UnicodeFileToHtmlTextConverter {
     private String fullFilenameWithPath;
+    private Reader reader;
 
     public UnicodeFileToHtmlTextConverter(String fullFilenameWithPath)
     {
