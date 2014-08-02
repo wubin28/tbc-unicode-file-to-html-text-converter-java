@@ -39,5 +39,4 @@ public class UnicodeFileToHtmlTextConverterTest {
         assertEquals("Cheers<br />Ben Wu<br />", converter.convertToHtml());
     }
 
-    // TODO-new-feature: Make the method convertToHtml() working for not only a file but also a string
 }
